@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Block2</title>
+
+    <style>
+        div {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+
+        span {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <span>1</span><span>2</span><span>3</span>
+</body>
+
+</html>
+
+
+<!-- 
+
+div 태그는 콘텐츠가 들어있는 영역에 대해서 width , height 를 조절할 수 있는 모습을 볼 수 있음
+span 태그는 콘텐츠에 대해서 스타일링 할 수 있기 때문에 width, height를 조절 할 수 없는 모습을 볼 수 있음
+div 태그는 block element 이기 때문에 차곡 차곡 세로로 쌓이는 모습을 볼 수 있음 (줄바꿈 O)
+span 태그는 inline element 이기 때문에 줄바꿈이 없이 쌓이는 모습을 볼 수 있음
+
+-->
+
+
+<!-- 
+
+**CSS Display 속성**
+none : 보이지 않음
+block : block 요소로 표시
+inline : inline 요소로 표시
+inline-block : block 과 inline의 중간 형태로 요소는 inline인데 내부는 block 처럼 표시함
+flex : Layout을 만들 때 자주 사용하는 값으로 뒤에서 자세히 다룰 예정
+
+-->
