@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <label for="username">아이디</label>
+            <input type="text" id="username">
+        </div>
+        <div>
+            <label for="password">패스워드</label>
+            <input type="text" id="password">
+        </div>
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+
+</html>
+
+
+
+<!-- 
+
+속성
+action : 양식 데이터를 처리할 서버의 프로그램 URI
+
+URI (Uniform Resource identifier): 인터넷 상에서 특정 자원을 나타내는 고유한 식별자
+
+URL (Uniform Resource Locator) : 인터넷 상에서 특정 자원의 위치를 나타내는 주소로 일반적으로 웹 주소로 알려져있음
+URN (Uniform Resource Name) : 자원의 위치가 아니라 자원 자체를 식별하기 위한 이름, URL은 자원의 위치를 제공하지만 URN 은 그 자원의 이름만을 제공하며 URN 은 상대적으로 적은 사용량을 보인다
+method : 양식을 제출할 때 사용할 HTTP 메소드
+
+post : 양식 데이터를 요청 본문 으로 전송
+get : 양식 데이터를 URL의 쿼리스트링으로 붙여서 전송
+
+-->
+
+
+<!-- 
+
+1. POST 메소드
+데이터 요청 본문 (body)으로 전송
+주로 긴 텍스트, 파일 업로드 등 큰 양의 데이터 를 전송 할 때 사용됨
+보안적으로 GET 메소드보다 안전하다. 왜냐면 POST 데이터는 URL에 노출되지 않기 때문에
+서버로 데이터를 제출 할 떄 사용됨
+
+2. GET 메소드
+데이터를 URL의 쿼리스트링(query string)으로 붙여서 전송
+주로 검색 쿼리 등 간단한 데이터 를 전송 할 때 사용됨
+브라우저에서 주소창에 직접 입력되는 데이터와 함께 사용됨
+브라우저 히스토리에 남아 보안적으로 덜 안전하다. URL이 노출되기 때문에
+
+-->

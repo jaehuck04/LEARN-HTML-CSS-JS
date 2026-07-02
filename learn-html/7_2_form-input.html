@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Input Tag</legend>
+            <ul>
+                <li>
+                    <label for="text">Text</label>
+                    <input type="text" id="text" required>
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" required>
+                </li>
+                <li>
+                    <label for="tel">전화번호</label>
+                    <input type="tel" id="tel" required>
+                </li>
+                <li>
+                    <label for="url">url</label>
+                    <input type="url" id="url" required>
+                </li>
+                <li>
+                    <label for="number">number</label>
+                    <input type="number" id="number" required>
+                </li>
+                <li>
+                    <label for="range">range</label>
+                    <input type="range" id="reange" required>
+                </li>
+                <li>
+                    <label for="password">password</label>
+                    <input type="password" id="password" required>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>날짜 관련</legend>
+            <ul>
+                <li>
+                    <label for="date">date</label>
+                    <input type="date" id="date">
+                </li>
+                <li>
+                    <label for="month">month</label>
+                    <input type="month" id="month">
+                </li>
+                <li>
+                    <label for="week">week</label>
+                    <input type="week" id="week">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>시간 관련</legend>
+            <ul>
+                <li>
+                    <label for="time">time</label>
+                    <input type="time" id="time">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>그 외</legend>
+            <ul>
+                <li>
+                    <input type="file">
+                </li>
+                <li>
+                    <input type="hidden" name="" value="">
+                </li>
+            </ul>
+        </fieldset>
+
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+
+</html>
+
+<!-- 
+
+<input> 요소로 데이터를 입력 받을 수 있음 . type 속성을 통해 다양한 방법으로 데이터를 받을 수 있음
+
+필수입력 required
+input 태그 안에 required를 넣으면 해당 input 값은 필수입력칸 이 된다.
+
+
+input type
+<input> 태그의 기본값으로 한 줄의 텍스트를 입력받음
+
+<input type="text" id="name" />
+HTML5 에서는 text 필드가 데이터 용도에 맞게 사용 할 수 있도록 다양한 타입이 추가되었음
+
+다양한 type
+email : email 데이터를 받기 위해 사용되며 이메일 유효성을 검증함
+tel : 전화번호를 받기 위해 사용되며 모바일 접근 시 키패드가 다름
+더 많은 type은 MDN 사이트를 참고
+추가로 엄청 많은 input type
+
+
+input tag
+email : 이메일 양상이 아니라면 제출이 불가능하게 유효성 검사를 함
+tel : 모바일에서 접근 시 해당 input 에 입력값을 넣으려고 하면 모바일 키패드가 올라옴
+url : url 주소가 아니면 제출이 불가능하도록 유효성 검사를 함
+number : 숫자를 입력 할 수 있으며 up , down 버튼이 생김
+range : 범위를 지정 할 수 있음
+password : password 로 설정시 값을 입력하면 값이 가려지며 복사 붙여넣기도 불가능함
+
+날짜 관련 tag
+date : 날짜를 설정 가능하며 달력에서 선택 가능
+month : 몇 년도 몇 월인지 설정 가능
+week : 몇 년도 몇 번째 주인지 설정 가능
+
+시간관련
+time : 시간 설정 가능
+
+그 외
+file : file 을 업로드 할 수 있으며 multiple 속성 사용 시 2개 이상의 파일 업로드 가능
+hidden : hidden 의 경우 name , value 속성과 함께 사용하며 UI 에서는 보이지 않지만 서버측에 데이터를 보내야 할 경우 사용
+
+label
+<label> 태그는 입력받은 필드를 설명 할 때 사용함 웹 접근성 준수
+사용 방법은 <label> 태그 하위에 <input> 태그를 위치 시킬 수 있고 id 와 for 속성을 사용하여 <input> 태그와 연결 시킬 수 있음
+
+<label> 의 for 속성은 <input> 의 id 속성과 같은 값을 가져야 하는 이유 는 label 의 for 속성은 해당 label이 어떤 input 값과 연결 되어 있는지를 설명해줌으로서 웹접근성을 향상 시킨다.
+
+-->
+
+
+<!-- 
+
+Form 데이터 태그 속성
+required : 입력값이 필수라는 것을 명시 할 수 있음
+
+readonly : 필드를 읽기 전용으로 필드를 만들 수 있음
+
+disabled : 비활성화 시킬 수 있으며 해당 필드는 서버로 전송되지 않음
+
+readonly vs disabled
+둘 다 데이터를 수정 할 수 없는 것은 같으나 readonly 는 서버로 데이터를 전송하며
+disabled 는 서버로 수정되지 않음
+
+autofocus : 초기에 해당 필드에 커서를 위치 시킬 수 있음
+
+placeholder : 입력 필드가 비어있을 때 설명 또는 가이드 문구를 삽입 할 수 있음
+
+-->
