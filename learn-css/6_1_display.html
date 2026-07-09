@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <style>
+        div,
+        h2 {
+            border: 1px solid gray;
+            /* width: 100px;
+            height: 100px; */
+
+            /* display: none; */
+            /* 요소는 있지만 영역은 차지하지 않음 */
+
+            /* visibility: hidden; */
+            /* html 요소는 보이지 않지만 영역은 남아있음 */
+        }
+
+        span,
+        a {
+            border: 1px solid blue;
+        }
+
+
+        article>div,
+        article>span {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Display Block</h1>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <h2>title</h2>
+
+    <!-- block 레벨 요소 -->
+    <!-- 
+    
+    가로 영역 모두 채움
+    세로 정렬 
+    width, height 변경o
+    
+    -->
+
+
+    <h1>Display Inline</h1>
+    <span>content</span>
+    <span>content</span>
+    <span>content</span>
+    <a href="#">Naver</a>
+
+    <!-- inline 레벨 요소 -->
+    <!--
+    
+    콘텐츠만큼 영역 차지
+    가로 정렬
+    width, height 변경x
+
+    -->
+
+    <article>
+        <h1>Display Inline Block</h1>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+        <span>content</span>
+        <span>content</span>
+        <span>content</span>
+    </article>
+
+
+    <!-- Inline Block 레벨 요소 -->
+    <!-- 
+    
+    콘텐츠만큼 영역 차지
+    가로 정렬
+    width, height 변경 가능
+     -->
+
+</body>
+
+</html>
