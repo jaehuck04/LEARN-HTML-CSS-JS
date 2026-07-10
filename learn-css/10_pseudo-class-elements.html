@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class&Element</title>
+
+    <style>
+        /* 가상 클래스 */
+        a {
+            font-size: 30px;
+        }
+
+        a:link {
+            color: cyan;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: blue;
+            font-weight: 900;
+        }
+
+        fieldset:hover {
+            background-color: lightgray;
+            box-shadow: 0 0 20px gray;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        input:focus {
+            outline: none;
+            border: 3px solid red;
+            box-shadow: 0 0 20px rgb(186, 105, 105);
+        }
+
+        .field {
+            margin-bottom: 10px;
+        }
+
+        li:nth-child(odd) {
+            background-color: yellow;
+        }
+
+        li:not(.target) {
+            font-size: 30px;
+        }
+
+
+        /* 가상 요소 */
+        .required::before {
+            content: '*';
+            margin-right: 2px;
+            color: red;
+            font-size: 18px;
+        }
+
+        [data-tooltip] {
+            position: relative;
+        }
+
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 0px;
+            left: 56px;
+            background-color: black;
+            color: white;
+            width: 210px;
+        }
+
+        .letter::first-letter {
+            font-size: 60px;
+            color: blue;
+        }
+
+        .line::first-line {
+            background-color: yellow;
+            color: blue;
+            font-size: 20px;
+        }
+
+        p::selection {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Psesudo Class</legend>
+        <div>
+            <a href="http://www.naver.com" target="_blank">네이버</a>
+            <a href="http://www.kakao.com" target="_blank">카카오</a>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>focus, before, after</legend>
+        <div class="field">
+            <label class="required" for="name">이름</label>
+            <input type="text" id="name">
+        </div>
+        <div class="field">
+            <label class="required" for="age">나이</label>
+            <input type="text" id="age">
+        </div>
+        <button data-tooltip="이 버튼을 클릭하여 정보를 보내세요!">보내기</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>nth-child, not</legend>
+        <ul>
+            <li class="target">1content</li>
+            <li>2content</li>
+            <li>3content</li>
+            <li>4content</li>
+            <li>5content</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>first-letter, first-line, selection</legend>
+        <div>
+            <p class="letter">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi quam ducimus itaque unde? Sed
+                perspiciatis ea ratione. Necessitatibus et porro, atque repellendus blanditiis nesciunt aspernatur alias
+                sapiente impedit deserunt!
+                Officiis, rem, itaque tenetur maiores quod possimus dicta harum enim facere assumenda blanditiis
+                voluptatum aut esse doloremque non odio illum iusto ea officia libero laudantium reprehenderit nobis!
+                Ex, quae quis.
+            </p>
+        </div>
+
+        <p class="line">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo voluptatem doloribus consequuntur mollitia
+            facilis, aspernatur minus quia nisi! Iste eaque incidunt libero omnis animi, quasi quisquam reiciendis
+            dolorem vero eos.
+            Ex, iusto. Culpa nisi, repudiandae commodi sequi doloribus rem modi deserunt pariatur molestiae voluptas
+            earum fugit id distinctio dolorem incidunt facere nostrum. Dolorem, itaque dolor! Temporibus, quos? Maiores,
+            qui explicabo.
+        </p>
+    </fieldset>
+</body>
+
+</html>
+
+
+<!-- 가상 클래스 -->
+<!-- 
+
+:link           => 방문하지 않은 요소 나타냄
+:visited        => 방문한 요소 나타냄
+:active         => 사용자가 활성화한 요소 나타냄
+:hover          => 사용자의 마우스 포인터가 요소 위에 올라가있으면 선택
+:focus          => 양식의 입력 칸 등 포커스 받은 요소 나타냄
+:nth-child      => 형제 사이에서의 순서에 따라 요소 선택 
+:not(selector)  => 요소 제외
+
+-->
+
+
+<!-- 가상 요소 -->
+<!-- 
+
+선택자::가상 요소 이름{속성: 속성값}
+
+::first-letter   => 텍스트의 첫 글자만 선택(블록 레벨 요소에만 사용 가능)
+::first-line     => 텍스트의 첫 라인만 선택(블록 레벨 요소에만 사용 가능)
+::before         => 특정 요소의 내용 부분 바로 앞에 다른 요소를 삽입
+::after          => 특정 요소의 내용 부분 바로 뒤에 다른 요소를 삽입
+::selection      => 해당 요소에서 사용자가 선택한 부분만을 선택
+
+ -->
