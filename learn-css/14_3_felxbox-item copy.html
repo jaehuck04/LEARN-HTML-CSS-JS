@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Basic</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-container {
+            background-color: green;
+            height: 100vh;
+            display: flex;
+
+        }
+
+        .flex-item {
+            color: white;
+            width: 80px;
+            height: 80px;
+            background-color: #ce43ec;
+            text-align: center;
+            border: 1px solid yellow;
+        }
+
+        .item1 {
+            /* order: 4; */
+            /* flex-grow: 2;
+            flex-shrink: 2; */
+            /* flex-basis: 160px; */
+            flex: 2 2 auto;
+            align-self: flex-end;
+        }
+
+        .item2 {
+            /* order: 3; */
+            /* flex-grow: 1;
+            flex-shrink: 1; */
+            /* flex-basis: 50%; */
+            flex: 1 1 auto;
+            align-self: center;
+        }
+
+        .item3 {
+            /* order: 2; */
+            /* flex-grow: 1;
+            flex-shrink: 1; */
+            /* flex-basis: 20vw; */
+            flex: 1 1 auto;
+        }
+
+        .item4 {
+            /* order: 1; */
+            /* flex-grow: 1;
+            flex-shrink: 1; */
+            flex: 1 1 auto;
+        }
+
+        .item5 {
+            /* order: 0; */
+            /* flex-grow: 1;
+            flex-shrink: 1; */
+            flex: 1 1 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item item1">1</div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3">3</div>
+        <div class="flex-item item4">4</div>
+        <div class="flex-item item5">5</div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- flex item 속성 -->
+<!--
+
+자식 요소의 크기나 순서에 관련된 속성
+
+flex
+flex-grow
+flex-shrink
+flex-basis
+order
+align-self
+
+-->
+
+<!-- 
+
+(1)
+order: flex item의 배치 순서를 지정(기본값 0)
+
+
+(2)
+flex-grow: flex item의 너비에 대한 확대 인자를 저장(기본값은 0이고 음수값은 무효)
+
+(3)
+flex-shrink: flex item의 너비에 대한 축소 인자를 저장(기본값은 1이고 음수값은 무효, 0을 지정하면 축소가 해제되어 원래의 너비를 유지)
+
+
+(4)
+flex-basis: flex item의 너비 기본값은 px, % 등의 단위로 지정(기본값은 auto)
+
+
+(5)
+flex: flex-grow, flex-shrink, flex-basis 속성의 단축 속성(기본값은 0 1 auto)
+
+
+(6)
+algin-self: align-items 속성보다 우선하여 개별 flex item을 정렬(기본값은 auto)   
+
+
+-->
